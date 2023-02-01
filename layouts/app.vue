@@ -14,7 +14,7 @@ const routes = [
   {
     title: 'Settings',
     icon: 'fa-solid fa-gear',
-    route: '/settings',
+    route: '/settings/providers',
     exact: false,
   },
 ];

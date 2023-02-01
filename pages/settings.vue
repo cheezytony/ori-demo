@@ -13,11 +13,6 @@ useHead({
 const currentRoute = useRoute();
 const routes = [
   {
-    title: 'Profile',
-    icon: 'fa-solid fa-circle-user',
-    route: '/settings',
-  },
-  {
     title: 'Providers',
     icon: 'fa-solid fa-handshake-angle',
     route: '/settings/providers',
