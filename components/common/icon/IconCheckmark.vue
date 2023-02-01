@@ -1,0 +1,17 @@
+<script lang="ts" setup></script>
+
+<template>
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    class="h-4 w-4"
+  >
+    <path
+      d="M20.8389 6.69459L8.81811 18.7154L3.16125 13.0586L4.57125 11.6486L8.81811 15.8854L19.4289 5.28459L20.8389 6.69459Z"
+      fill="currentColor"
+    />
+  </svg>
+</template>
