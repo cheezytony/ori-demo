@@ -40,9 +40,9 @@ const handleLogout = () => router.push('/login');
           <div class="flex items-center">
             <div class="bg-current flex-shrink-0 h-9 mix-blend-difference rounded-md w-9"></div>
             <div
-              class="font-medium flex items-center -ml-7 text-[24px]"
+              class="font-medium flex items-center -ml-7 text-[24px] tracking-widest"
             >
-              ori
+              Ori
             </div>
           </div>
         </div>
