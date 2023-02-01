@@ -18,12 +18,6 @@ const routes = [
     route: '/settings',
   },
   {
-    title: 'Company',
-    icon: 'fa-solid fa-building',
-    route: '/settings/company',
-    exact: false,
-  },
-  {
     title: 'Providers',
     icon: 'fa-solid fa-handshake-angle',
     route: '/settings/providers',
@@ -45,13 +39,13 @@ const compareRoute = (route: string, exact = true) => {
         <div class="flex flex-col gap-2 px-8">
           <template
             :key="index"
-            v-for="({ route, icon, title, exact }, index) in routes"
+            v-for="({ route, icon, title }, index) in routes"
           >
             <NuxtLink
               :to="route"
               class="relative flex items-center gap-2 px-4 py-2 rounded-md"
               :class="
-                compareRoute(route, exact)
+                compareRoute(route)
                   ? 'font-medium text-gray-800 bg-gray-300'
                   : 'text-gray-600 hover:text-gray-800 hover:bg-gray-300 hover:bg-opacity-50'
               "

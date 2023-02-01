@@ -37,7 +37,7 @@ onMounted(mapFormData);
         id="domain"
         name="domain"
         label="Freshdesk Domain"
-        placeholder="e.g. https://enif.freshdesk.com"
+        placeholder="e.g. https://monstersinc.freshdesk.com"
         class="max-w-[500px]"
       />
 

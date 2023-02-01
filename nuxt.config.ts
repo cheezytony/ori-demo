@@ -21,7 +21,7 @@ export default defineNuxtConfig({
         },
       ],
       titleTemplate: (title) => {
-        return title ? `${title} - Enif` : 'Enif';
+        return title ? `${title} - Blah` : 'Blah';
       },
     },
   },
@@ -33,7 +33,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       apiBaseUrl: 'http://localhost:3000',
-      apiTokenStorageKey: 'enif:token',
+      apiTokenStorageKey: 'blah:token',
     },
   },
 

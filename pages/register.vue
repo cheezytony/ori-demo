@@ -52,7 +52,7 @@ const submit = () => router.push('/');
               id="first_name"
               :form="registerForm"
               label="First Name *"
-              placeholder="e.g. Steve"
+              placeholder="e.g. Mike"
             />
             <FormGroup
               v-model="registerForm.fields.last_name.value"
@@ -60,7 +60,7 @@ const submit = () => router.push('/');
               id="last_name"
               :form="registerForm"
               label="Last Name *"
-              placeholder="e.g. Sam"
+              placeholder="e.g. Wizowski"
             />
             <FormGroup
               v-model="registerForm.fields.company_name.value"
@@ -69,7 +69,7 @@ const submit = () => router.push('/');
               id="company_name"
               :form="registerForm"
               label="Company *"
-              placeholder="e.g. CredPal"
+              placeholder="e.g. Monsters inc."
             />
             <FormGroup
               v-model="registerForm.fields.phone.value"

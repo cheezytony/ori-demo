@@ -7,7 +7,7 @@ import Container from '@/components/common/Container.vue';
     <Container>
       <div class="mb-16 pb-5">
         <RouterLink to="/">
-          Enif
+          Blah
         </RouterLink>
       </div>
 

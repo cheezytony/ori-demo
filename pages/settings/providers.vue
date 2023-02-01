@@ -13,7 +13,7 @@ const { industries } = useProviders();
 
 const providers = computed(
   () => {
-    return industries.find((industry, i) => i === index?.value)?.providers!;
+    return industries.flatMap(({ providers }) => providers);
   }
 );
 
@@ -22,6 +22,8 @@ const components: Record<string, VueComponent> = {
   Zohodesk,
   Freshdesk,
 };
+
+const isIntegrated = (provider: Provider) => components[provider.name];
 
 const index = ref(0);
 const setIndex = (i: number) => (index.value = i);
@@ -37,22 +39,6 @@ const cancel = () => (isConfiguring.value = null);
       Configure and select your provider
     </Heading>
 
-    <div class="flex flex-row flex-wrap gap-4 mb-16">
-      <template :key="name" v-for="({ name, providers }, i) in industries">
-        <button
-          class="appearance-none px-6 py-2 rounded-md text-[14px]"
-          :class="
-            index === i
-              ? 'font-medium bg-blue-500 text-white'
-              : 'bg-blue-50 text-gray-400 hover:bg-blue-200 hover:text-blue-500'
-          "
-          @click="setIndex(i)"
-        >
-          {{ name }}
-        </button>
-      </template>
-    </div>
-
     <div class="flex flex-col gap-8">
       <template :key="provider.name" v-for="(provider, i) in providers">
         <div class="flex flex-col gap-8">
@@ -62,10 +48,10 @@ const cancel = () => (isConfiguring.value = null);
                 {{ provider.name }}
               </p>
               <p class="mb-0 text-gray-500">
-                {{ provider.description }}
+                {{ isIntegrated(provider) ? 'Click to link Account' : 'Coming soon...' }}
               </p>
             </div>
-            <div class="flex gap-4 ml-auto">
+            <div class="flex gap-4 ml-auto" :class="[!isIntegrated(provider) && 'pointer-events-none opacity-25']">
               <ButtonBase
                 v-if="isConfiguring?.name === provider.name"
                 color-scheme="red"

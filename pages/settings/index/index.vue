@@ -21,7 +21,7 @@ const form = useForm({
         name="first_name"
         id="first_name"
         label="First Name"
-        placeholder="e.g. Antonio"
+        placeholder="e.g. Mike"
       />
       <FormGroup
         v-model="form.fields.last_name.value"
@@ -29,13 +29,13 @@ const form = useForm({
         name="last_name"
         id="last_name"
         label="Last Name"
-        placeholder="e.g. Okoro"
+        placeholder="e.g. Wizowski"
       />
       <FormGroup
         name="email"
         id="email"
         label="Email Address"
-        placeholder="e.g. antonio.o@credpal.com"
+        placeholder="e.g. mike.w@monsters.inc"
         :disabled="true"
       />
       <FormGroup

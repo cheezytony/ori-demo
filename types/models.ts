@@ -34,7 +34,7 @@ export interface Provider extends Partial<Model> {
   logo?: string;
   name: string;
   slug: string;
-  description: string;
+  description?: string;
   industry?: string;
   status?: string;
   type?: string;

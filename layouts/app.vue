@@ -42,7 +42,7 @@ const handleLogout = () => router.push('/login');
             <div
               class="font-medium flex items-center -ml-7 text-[24px]"
             >
-              enif
+              blah blah
             </div>
           </div>
         </div>
@@ -109,7 +109,7 @@ const handleLogout = () => router.push('/login');
           AO
         </div>
         <div>
-          Antonio Okoro
+          Mike Wizowski
         </div>
         <span class="text-sm">
           <FontAwesomeIcon icon="fa-solid fa-chevron-down" />

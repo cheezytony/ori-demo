@@ -2,6 +2,7 @@
 import { useApiRequest } from '~~/hooks/api';
 import Heading from '~~/components/common/typography/Heading.vue';
 import Skeleton from '~~/components/common/loaders/Skeleton.vue';
+import FormGroup from '~~/components/common/form/FormGroup.vue';
 
 definePageMeta({
   layout: 'app',
@@ -14,6 +15,19 @@ useHead({
 const route = useRoute();
 const ticketId = computed(() => Number(route.params.id));
 
+const options = [
+  { title: 'Gmail', value: 'gmail' },
+  { title: 'Freshdesk', value: 'freshdesk' },
+  { title: 'Zohodesk', value: 'zohodesk' },
+  { title: 'Zendesk', value: 'Zendesk' },
+  { title: 'Intercom', value: 'Intercom' },
+  { title: 'Outlook', value: 'Outlook' },
+  { title: 'Twitter', value: 'Twitter' },
+  { title: 'Facebook', value: 'Facebook' },
+  { title: 'Instagram', value: 'Instagram' },
+  { title: 'Tiktok', value: 'Tiktok' },
+];
+const option = ref('gmail');
 const categories = ['Unprocessed', 'Pending', 'Resolved'];
 const index = ref(0);
 const setIndex = (i: number) => (index.value = i);
@@ -27,6 +41,16 @@ const setIndex = (i: number) => (index.value = i);
       <div class="border-r border-gray-200 sticky top-0">
         <div class="flex items-center h-[150px] px-8">
           <Heading level="2">Tickets</Heading>
+        </div>
+
+        <div class="px-8">
+          <FormGroup
+            v-model="option"
+            type="select"
+            :options="options"
+            label="Select Provider"
+            placeholder="Select Provider"
+          />
         </div>
 
         <div class="flex flex-row flex-wrap gap-4 mb-16 px-8">
@@ -64,7 +88,7 @@ const setIndex = (i: number) => (index.value = i);
                   <div
                     class="font-medium leading-[1] text-[14px] text-gray-700"
                   >
-                    Antonio Okoro
+                    Mike Wizowski
                   </div>
                   <div class="text-gray-500 text-sm">3:15pm</div>
                 </div>
@@ -81,11 +105,12 @@ const setIndex = (i: number) => (index.value = i);
             </NuxtLink>
           </template>
         </div>
-
       </div>
     </div>
     <div class="bg-white flex-grow px-8">
-      <div class="flex flex-col h-full max-w-[700px] mx-auto py-[150px] sticky top-0">
+      <div
+        class="flex flex-col h-full max-w-[700px] mx-auto py-[150px] sticky top-0"
+      >
         <RouterView />
       </div>
     </div>
