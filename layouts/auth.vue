@@ -7,7 +7,7 @@ import Container from '@/components/common/Container.vue';
     <Container>
       <div class="mb-16 pb-5">
         <RouterLink to="/">
-          Blah
+          Ori
         </RouterLink>
       </div>
 

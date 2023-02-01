@@ -42,7 +42,7 @@ const handleLogout = () => router.push('/login');
             <div
               class="font-medium flex items-center -ml-7 text-[24px]"
             >
-              blah blah
+              ori
             </div>
           </div>
         </div>
