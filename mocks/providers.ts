@@ -69,11 +69,11 @@ export const industries: Industry[] = [
         slug: 'Notion',
         logo: 'Notion',
       },
-      {
-        name: 'Discord',
-        slug: 'Discord',
-        logo: 'Discord',
-      },
+      // {
+      //   name: 'Discord',
+      //   slug: 'Discord',
+      //   logo: 'Discord',
+      // },
     ],
   },
   {
@@ -94,11 +94,11 @@ export const industries: Industry[] = [
         slug: 'instagram',
         logo: 'https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png',
       },
-      {
-        name: 'TikTok',
-        slug: 'tiktok',
-        logo: 'https://www.tiktok.com/favicon.ico',
-      },
+      // {
+      //   name: 'TikTok',
+      //   slug: 'tiktok',
+      //   logo: 'https://www.tiktok.com/favicon.ico',
+      // },
     ],
   },
   {
